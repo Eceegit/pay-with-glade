@@ -1,8 +1,8 @@
 import {Routes, Route} from 'react-router-dom'
 import {Container} from 'react-bootstrap'
-import {Home} from './components/Home'
-import {Products} from './components/Products'
-import {About} from './components/About'
+import {Home} from './pages/Home'
+import {Products} from './pages/Products'
+import {About} from './pages/About'
 import {Navigation} from './components/Navigation'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
       <div>
         <Navigation />
-        
+
         <Container className='mb-5'>
           <Routes>
             <Route path='/' element={<Home />} />

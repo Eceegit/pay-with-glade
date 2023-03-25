@@ -1,0 +1,14 @@
+.rounded-circle:hover  {
+    background-color: #eee; /* Change the button background color on hover */
+    color: #000;
+    transition: 0.5s;
+    
+  }
+   button {
+    outline: #f00;
+  }
+  
+  .rounded-circle:hover span {
+    background-color: #f00; /* Change the cart count span background color on hover */
+  }
+  
