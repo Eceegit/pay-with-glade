@@ -19,7 +19,7 @@ export const Navigation = () => {
           <Nav.Link to='/about' as={NavLink}>About</Nav.Link>
         </Nav>
 
-        <Button variant='outline-primary' className='rounded-circle' style={{position: "relative", width: '3rem', height:"3rem"}}>
+        <Button variant='outline-success' className='rounded-circle' style={{position: "relative", width: '3rem', height:"3rem"}}>
             <FaShoppingCart size={25} className='text-dark' />
             <span className='text-white  d-flex justify-content-center align-items-center rounded-circle' 
             style={{ 

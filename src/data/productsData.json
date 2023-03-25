@@ -1,0 +1,54 @@
+[         
+                    {
+                         "id": 1, 
+                         "title": "iPhone 9", 
+                         "description": "An apple mobile which is nothing like apple",
+                         "price": 549, 
+                         "discountPercentage": 12.96,
+                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                    },
+                    {
+                         "id": 2, 
+                         "title": "iPhone X", 
+                         "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD di…lay with OLED technology A12 Bionic chip with ...", 
+                         "price": 899, 
+                         "discountPercentage": 17.94,
+                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                    },                    
+                    {
+                         "id": 3, 
+                         "title": "Samsung Universe 9",
+                         "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+                         "price": 1249,
+                         "discountPercentage": 15.46,
+                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                    },                   
+                    {
+                         "id": 4, 
+                         "title": "OPPOF19", 
+                         "description": "OPPO F19 is officially announced on April 2021.", 
+                         "price": 280, 
+                         "discountPercentage": 17.91,
+                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                    },                  
+                    {
+                         "id": 5, 
+                         "title": "Huawei P30", 
+                         "description": "Huawei’s re-badged P30 Pro New Edition was officia…ny and now the device has made its way to the UK.", 
+                         "price": 499, 
+                         "discountPercentage": 10.58, 
+                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                    },
+                    {
+                         "id": 6, 
+                         "title": "MacBook Pro",
+                         "description": "MacBook Pro 2021 with mini-LED display may launch between September, November", 
+                         "price": 1749, 
+                         "discountPercentage": 11.02, 
+                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                    }
+     ]
+
+
+
+
