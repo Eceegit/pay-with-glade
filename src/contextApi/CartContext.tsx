@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react"
+import { CartList } from "../components/CartList"
 
 //Defining the type of props to be passed to the CartProvider
 type CartProp ={
@@ -6,10 +7,19 @@ type CartProp ={
 }
 //Defining the type for the shopping cart functionality
 type CartContextType = {
+    //Defining the type for the shopping cart functionality
     fetchQuantity: (id: number) => number,
     removeFromCart: (id: number) => void,
     increOrAddToCart: (id: number) => void,
     decreQuantity: (id: number) => void,
+
+    //defining the function responsible for the cart navbar
+    openCart : () => void
+    closeCart : () => void
+    //total no of products in the cart
+    cartTotalQuantity: number
+    cartProduct: CartProductType[]
+
 }
 
 //Defining the type for the useState cart products
@@ -32,6 +42,7 @@ export const CartProvider = ({children} :CartProp)=> {
 
     // Setting useState hook for the cart functionality
     const [cartProduct, setCartProduct] = useState<CartProductType[]>([])
+    const [isOpen, setIsOpen] = useState(false)
 
     // Declaring the functions for the shopping cart functionality
     const fetchQuantity = (id: number) => {
@@ -39,22 +50,45 @@ export const CartProvider = ({children} :CartProp)=> {
     }
 
     const removeFromCart = (id: number) => {
-       return setCartProduct(prev => prev.filter(product => product.id !== id))
+       return setCartProduct(curr => curr.filter(product => product.id !== id))
     }
 
     const increOrAddToCart = (id: number) => {
-        setCartProduct(prev => {
-            return prev.find(product => product.id === id) ? prev.map(product => {
-                if (product.id === id) {
-                    return {...product, quantity: product.quantity + 1}
+        setCartProduct(curr => {
+          if (curr.find(product => product.id === id) == null){
+              return [...curr, {id, quantity: 1}];
+          }else {
+              return curr.filter((product) => {
+                if(product.id === id){ 
+                    console.log(id)
+                    return {...product, quantity: product.quantity + 1};
+                } else{
+                    return product               
                 }
-                return product
-            }) : [...prev, {id, quantity: 1}]
-        })
-    }
+                })           
+          }
+        });
+      };
+    // const increOrAddToCart = (id: number) => {
+    //     setCartProduct(curr => {
+    //         const existingProduct = curr.find(product => product.id === id)
+    //         if(existingProduct){
+    //             return curr.map(product => {
+    //                 if(product.id === id){
+    //                     console.log(id)
+    //                     return {...product, quantity: product.quantity + 1}
+    //                 }
+    //             })
+                    // return product
+    //         }
+
+    //         return [...curr, {id, quantity: 1}]
+    //     })
+        
+    // }
 
     const decreQuantity = (id: number) => {
-        setCartProduct(prev => prev.find(product => product.id === id)?.quantity === 1 ? prev.filter(product => product.id !== id) : prev.map(product => {
+        setCartProduct(curr => curr.find(product => product.id === id)?.quantity === 1 ? curr.filter(product => product.id !== id) : curr.filter(product => {
             if (product.id === id) {
                 return {...product, quantity: product.quantity - 1}
             }
@@ -62,7 +96,29 @@ export const CartProvider = ({children} :CartProp)=> {
         }))
     }
 
-    return <ContextCreated.Provider value={{fetchQuantity,removeFromCart, increOrAddToCart, decreQuantity}}>
+
+    //Declaring the cart nav functions
+    const openCart = () => {
+        setIsOpen(true)
+    }
+
+    const closeCart = () => {
+        setIsOpen(false)
+    }
+    const cartTotalQuantity = cartProduct.reduce((quantity, item) => item.quantity + quantity, 0)
+
+
+return <ContextCreated.Provider value={{
+        fetchQuantity,
+        removeFromCart, 
+        increOrAddToCart,
+        decreQuantity,
+        openCart,
+        closeCart,
+        cartProduct,
+        cartTotalQuantity
+         }}>
+            <CartList isOpen={isOpen}/>
         {children}
     </ContextCreated.Provider>
 }

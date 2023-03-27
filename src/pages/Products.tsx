@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import ProductsList from '../data/productsData.json'
 import {Row, Col, Card, Button} from 'react-bootstrap'
 import { currency } from '../currencyFormatter/currency'
@@ -11,6 +10,7 @@ export const Products = ({id}: ProductType) => {
 
   //consumed the useCartContext
   const {fetchQuantity,removeFromCart, increOrAddToCart, decreQuantity} = UseCartContext()
+  
  //declare a variable quantity and set it to 0 inorder to conditionally render the "add to cart" button
  const quantity = fetchQuantity(id)
   return (
