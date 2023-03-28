@@ -20,11 +20,11 @@ export const Products = ({id}: ProductType) => {
       {ProductsList.map((product) => (
         <Col key={product.id}> 
           <Card style={{ width: '18rem' }} className="h-100">
-            <Card.Img variant="top" src={product.thumbnail}  style={{objectFit: 'cover', height: '160px'}} />
+            <Card.Img variant="top" src={product.thumbnail}  style={{objectFit: 'cover', height: '200px'}} />
             <Card.Body className='d-flex flex-column '>
               <Card.Title className='d-flex justify-content-between align-items-baseline mb-2'>
-                  <h3>{product.title}</h3>
-                  <span className='ml-3 text-secondary'>
+                  <h3 style={{fontSize: "20px"}}>{product.title}</h3>
+                  <span className='ml-3 text-muted ' style={{fontSize: "18px"}}>
                     {currency(product.price)}
                   </span>
               </Card.Title>

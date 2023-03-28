@@ -1,11 +1,11 @@
 [         
                     {
                          "id": 1, 
-                         "title": "iPhone 9", 
+                         "title": "iPhone 14", 
                          "description": "An apple mobile which is nothing like apple",
-                         "price": 549, 
+                         "price": 949, 
                          "discountPercentage": 12.96,
-                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                         "thumbnail": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/59/0645102/1.jpg?9227"
                     },
                     {
                          "id": 2, 
@@ -13,7 +13,7 @@
                          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD di…lay with OLED technology A12 Bionic chip with ...", 
                          "price": 899, 
                          "discountPercentage": 17.94,
-                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                         "thumbnail": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/29/0532231/1.jpg?2347"
                     },                    
                     {
                          "id": 3, 
@@ -21,7 +21,7 @@
                          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
                          "price": 1249,
                          "discountPercentage": 15.46,
-                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                         "thumbnail": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/507389/1.jpg?7506"
                     },                   
                     {
                          "id": 4, 
@@ -29,7 +29,7 @@
                          "description": "OPPO F19 is officially announced on April 2021.", 
                          "price": 280, 
                          "discountPercentage": 17.91,
-                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                         "thumbnail": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/99/513872/1.jpg?3972"
                     },                  
                     {
                          "id": 5, 
@@ -37,7 +37,7 @@
                          "description": "Huawei’s re-badged P30 Pro New Edition was officia…ny and now the device has made its way to the UK.", 
                          "price": 499, 
                          "discountPercentage": 10.58, 
-                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                         "thumbnail": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/18/934317/1.jpg?2104"
                     },
                     {
                          "id": 6, 
@@ -45,7 +45,7 @@
                          "description": "MacBook Pro 2021 with mini-LED display may launch between September, November", 
                          "price": 1749, 
                          "discountPercentage": 11.02, 
-                         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71ZtNda7h4L._AC_SL1500_.jpg"
+                         "thumbnail": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/563509/1.jpg?0717"
                     }
      ]
 
