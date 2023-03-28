@@ -3,6 +3,7 @@ import { UseCartContext } from "../contextApi/CartContext"
 import { currency } from "../currencyFormatter/currency"
 import { CartItem } from "./CartItem"
 import productsData from '../data/productsData.json'
+import GladePayment from '../payment/GladePayment'
 
 type CartListProp = {
     isOpen: boolean
@@ -31,6 +32,8 @@ export function CartList({isOpen}: CartListProp) {
                                     return total + (product?.price|| 0) * cartProduct.quantity
                                 }, 0))}
                             </div>
+
+                            <GladePayment />
                         </Stack>
 
                     </Offcanvas.Body>
