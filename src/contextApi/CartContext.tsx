@@ -58,7 +58,7 @@ export const CartProvider = ({children} :CartProp)=> {
           if (curr.find(product => product.id === id) == null){
               return [...curr, {id, quantity: 1}];
           }else {
-              return curr.filter((product) => {
+              return curr.map((product) => {
                 if(product.id === id){ 
                     console.log(id)
                     return {...product, quantity: product.quantity + 1};
@@ -88,7 +88,7 @@ export const CartProvider = ({children} :CartProp)=> {
     // }
 
     const decreQuantity = (id: number) => {
-        setCartProduct(curr => curr.find(product => product.id === id)?.quantity === 1 ? curr.filter(product => product.id !== id) : curr.filter(product => {
+        setCartProduct(curr => curr.find(product => product.id === id)?.quantity === 1 ? curr.filter(product => product.id !== id) : curr.map(product => {
             if (product.id === id) {
                 return {...product, quantity: product.quantity - 1}
             }

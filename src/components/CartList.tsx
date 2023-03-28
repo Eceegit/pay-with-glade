@@ -1,6 +1,8 @@
 import { Offcanvas, Stack } from "react-bootstrap"
 import { UseCartContext } from "../contextApi/CartContext"
+import { currency } from "../currencyFormatter/currency"
 import { CartItem } from "./CartItem"
+import productsData from '../data/productsData.json'
 
 type CartListProp = {
     isOpen: boolean
@@ -22,7 +24,15 @@ export function CartList({isOpen}: CartListProp) {
                                     <CartItem key={product.id} {...product} />
                                 )
                             )}
+
+                            <div className="ms-auto fs-6 fw-bold">
+                                Total: {currency(cartProduct.reduce((total, cartProduct) => {
+                                    const product = productsData.find(product => product.id ===  cartProduct.id)
+                                    return total + (product?.price|| 0) * cartProduct.quantity
+                                }, 0))}
+                            </div>
                         </Stack>
+
                     </Offcanvas.Body>
                 </Offcanvas>
             </div>

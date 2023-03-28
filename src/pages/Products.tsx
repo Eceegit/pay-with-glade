@@ -33,18 +33,19 @@ export const Products = ({id}: ProductType) => {
               {/* conditionally render the "add to cart" button */}
               <div className="mt-auto ">
                 {quantity === 0 ? (
-                  <Button className='w-100' variant='success'onClick={()=> increOrAddToCart(id)} >ADD TO CART</Button>
-                ): 
-                  <div className='d-flex flex-column align-items-center'>
-                    <div className='d-flex flex-row justify-content-center align-items-center ' >
-                      <Button variant="outline-success" onClick={()=> decreQuantity(id)}>-</Button>
-                      <span className='mx-2'>{quantity} in cart</span>
-                      <Button variant="outline-success" onClick={()=> increOrAddToCart(id)}>+</Button>
-                    </div>
+                  <Button className='w-100' variant='success'onClick={()=> increOrAddToCart(product.id)} >ADD TO CART</Button>
+                  ): ( 
+                  <Button className='w-100' variant='success'onClick={()=> increOrAddToCart(product.id)} >ADDED TO CART</Button>
+                  // <div className='d-flex flex-column align-items-center'>
+                  //   <div className='d-flex flex-row justify-content-center align-items-center ' >
+                  //     <Button variant="outline-success" onClick={()=> decreQuantity(product.id)}>-</Button>
+                  //     <span className='mx-2'>{quantity} in cart</span>
+                  //     <Button variant="outline-success" onClick={()=> increOrAddToCart(product.id)}>+</Button>
+                  //   </div>
                   
-                      <Button variant="danger" className='mt-2' onClick={()=> removeFromCart(id)}>Remove</Button>
-                  </div>
-                }
+                  //     <Button variant="danger" className='mt-2' onClick={()=> removeFromCart(id)}>Remove</Button>
+                  // </div>
+                )}
               </div>
             </Card.Body>
           </Card>
