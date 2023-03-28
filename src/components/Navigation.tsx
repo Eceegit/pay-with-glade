@@ -12,8 +12,8 @@ export const Navigation = () => {
   return (
     <Navbar className='bg-light shadow-sm mb-3' sticky='top'>
       <Container>
-        <Navbar.Brand href='/'>
-          BuyWithGlade
+        <Navbar.Brand href='/' className='fw-bold'>
+          BuyWithGlade <span style={{fontSize: '20px', color: 'red'}}>.</span>
         </Navbar.Brand>
 
         <Nav className='justify-content-center' activeKey="/">

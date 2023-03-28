@@ -69,23 +69,6 @@ export const CartProvider = ({children} :CartProp)=> {
           }
         });
       };
-    // const increOrAddToCart = (id: number) => {
-    //     setCartProduct(curr => {
-    //         const existingProduct = curr.find(product => product.id === id)
-    //         if(existingProduct){
-    //             return curr.map(product => {
-    //                 if(product.id === id){
-    //                     console.log(id)
-    //                     return {...product, quantity: product.quantity + 1}
-    //                 }
-    //             })
-                    // return product
-    //         }
-
-    //         return [...curr, {id, quantity: 1}]
-    //     })
-        
-    // }
 
     const decreQuantity = (id: number) => {
         setCartProduct(curr => curr.find(product => product.id === id)?.quantity === 1 ? curr.filter(product => product.id !== id) : curr.map(product => {

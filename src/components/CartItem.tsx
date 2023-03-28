@@ -1,4 +1,4 @@
-import { Button, Row, Stack } from "react-bootstrap"
+import { Button, Stack } from "react-bootstrap"
 import { UseCartContext } from "../contextApi/CartContext"
 import { currency } from "../currencyFormatter/currency"
 import productsData from '../data/productsData.json'
@@ -29,7 +29,7 @@ export function CartItem({id, quantity}: CartItemProps){
 
                 <div className='d-flex flex-row justify-content-center align-items-center  ' >
                       <Button variant="outline-success" onClick={()=> decreQuantity(product.id)}>-</Button>
-                      <span className='mx-2'>{quantity} in cart</span>
+                      <span className='mx-2'>{quantity}</span>
                       <Button variant="outline-success" onClick={()=> increOrAddToCart(product.id)}>+</Button>
                 </div>
                 

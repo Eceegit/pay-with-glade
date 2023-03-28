@@ -3,7 +3,7 @@ import { UseCartContext } from "../contextApi/CartContext"
 import { currency } from "../currencyFormatter/currency"
 import { CartItem } from "./CartItem"
 import productsData from '../data/productsData.json'
-import GladePayment from '../payment/GladePayment'
+// import GladePayment from '../payment/GladePayment'
 
 type CartListProp = {
     isOpen: boolean
@@ -33,7 +33,7 @@ export function CartList({isOpen}: CartListProp) {
                                 }, 0))}
                             </div>
 
-                            <GladePayment />
+                            {/* <GladePayment /> */}
                         </Stack>
 
                     </Offcanvas.Body>

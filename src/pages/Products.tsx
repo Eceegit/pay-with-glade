@@ -5,11 +5,19 @@ import { UseCartContext } from '../contextApi/CartContext'
 
 type ProductType = {
   id: number,
+  thumbnail: string,
+  title: string,
+  price: number,
+  description: string
 }
-export const Products = ({id}: ProductType) => {
+
+type ProductPropId = {
+  id?: number | any
+}
+export const Products = ({id}: ProductPropId) => {
 
   //consumed the useCartContext
-  const {fetchQuantity,removeFromCart, increOrAddToCart, decreQuantity} = UseCartContext()
+  const {fetchQuantity, increOrAddToCart} = UseCartContext()
   
  //declare a variable quantity and set it to 0 inorder to conditionally render the "add to cart" button
  const quantity = fetchQuantity(id)
@@ -17,7 +25,7 @@ export const Products = ({id}: ProductType) => {
     <div>
     <div>Products</div>
         <Row md={2} xs={1} sm={2} lg={3} className='g-4'>
-      {ProductsList.map((product) => (
+      {ProductsList.map((product: ProductType) => (
         <Col key={product.id}> 
           <Card style={{ width: '18rem' }} className="h-100">
             <Card.Img variant="top" src={product.thumbnail}  style={{objectFit: 'cover', height: '200px'}} />
@@ -36,15 +44,7 @@ export const Products = ({id}: ProductType) => {
                   <Button className='w-100' variant='success'onClick={()=> increOrAddToCart(product.id)} >ADD TO CART</Button>
                   ): ( 
                   <Button className='w-100' variant='success'onClick={()=> increOrAddToCart(product.id)} >ADDED TO CART</Button>
-                  // <div className='d-flex flex-column align-items-center'>
-                  //   <div className='d-flex flex-row justify-content-center align-items-center ' >
-                  //     <Button variant="outline-success" onClick={()=> decreQuantity(product.id)}>-</Button>
-                  //     <span className='mx-2'>{quantity} in cart</span>
-                  //     <Button variant="outline-success" onClick={()=> increOrAddToCart(product.id)}>+</Button>
-                  //   </div>
                   
-                  //     <Button variant="danger" className='mt-2' onClick={()=> removeFromCart(id)}>Remove</Button>
-                  // </div>
                 )}
               </div>
             </Card.Body>
@@ -55,21 +55,5 @@ export const Products = ({id}: ProductType) => {
     </Row>
   </div>
 
-
-
-
-
-
-
-
-    // <div>
-    //     <div>Products</div>
-    //     <Row>
-    //         {productsData.map(product => ( 
-    //             <Col>{{product}}</Col>
-                
-    //         ))}
-    //     </Row>
-    // </div>
   )
 }
