@@ -26,8 +26,8 @@ export const Products = ({id}: ProductPropId) => {
     <div>Products</div>
         <Row md={2} xs={1} sm={2} lg={3} className='g-4'>
       {ProductsList.map((product: ProductType) => (
-        <Col key={product.id}> 
-          <Card style={{ width: '18rem' }} className="h-100">
+        <Col md={6} lg={4} key={product.id}> 
+          <Card className="h-100">
             <Card.Img variant="top" src={product.thumbnail}  style={{objectFit: 'cover', height: '200px'}} />
             <Card.Body className='d-flex flex-column '>
               <Card.Title className='d-flex justify-content-between align-items-baseline mb-2'>
